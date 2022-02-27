@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // As the last step of your lab, hook this up to index.html
 
 async function mainEvent() { // the async keyword means we can make API requests
@@ -15,3 +16,5 @@ async function mainEvent() { // the async keyword means we can make API requests
 
 // this actually runs first! It's calling the function above
 document.addEventListener('DOMContentLoaded', async () => mainEvent()); // the async keyword means we can make API requests
+=======
+>>>>>>> parent of 2bdc0ca (Merge branch 'main' of https://github.com/UMD-INST377/INST377-Lab-Work)

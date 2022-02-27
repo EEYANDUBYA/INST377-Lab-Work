@@ -37,7 +37,7 @@ app.use('/api', apiRoutes);
 
 async function bootServer() {
   try {
-    app.listen(PORT, async () => {
+    app.listen(PORT, () => {
       // Turn these back on in later labs
       // const mysql = await db.sequelizeDB;
       // await mysql.sync();
