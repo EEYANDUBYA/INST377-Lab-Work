@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>IAN WINSLOW Lab 5</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="wrapper">
+
+<head>
+  <title>IAN WINSLOW Lab 5</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="header-box">
+    <p>Ian Winslow's Lab 5</p>
+  </div>
+  <div class="wrapper">
+    <div class="columns">
       <div class="container">
-        <div class="box ">Ian Winslow's Lab 5</div>
+        <form action='https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json' method='get' class='speaker-form'>
+          <div class='form-row'>
+            <div><label for='first-name'>First Name</label></div>
+            <div><input id='first-name' name='first-name' type='text' /></div>
+          </div>
+          <div class='form-row'>
+            <div><label for='food-preference'>Food Preference</label></div>
+            <div><input id='food-preference' name='food-preference' type='text' /></div>
+          </div>
+          <fieldset class='legacy-form-row'>
+            <legend>Veggie or Vegan</legend>
+            <input id='talk-type-1' name='food-type' type='radio' value='main-stage' />
+            <label for='talk-type-1' class='radio-label'>Yes</label>
+            <input id='talk-type-2' name='talk-type' type='radio' value='workshop' checked />
+            <label for='talk-type-2' class='radio-label'>No</label>
+          </fieldset>
+          <div class='form-row'>
+            <button>Submit</button>
+          </div>
+        </form>
+      </div>
+      <div class="container">
+        <div class="other-box"> This is going to be something in two weeks</div>
       </div>
     </div>
-  </body>
+  </div>
+  <script src="script.js"></script>
+</body>
+
 </html>
