@@ -1,21 +1,17 @@
 // As the last step of your lab, hook this up to index.html
 
-function CreateListForHTMLForm(array) {
-  console.log('HTML Creator');
-  console.log(array);
-  const firstList = document.querySelector('resto-list');
-  // firstList.innerHTML = '';
-  array.forEach((item) => {
-    const {name} = item;
-    const externalName = name.toLowerCase();
-    const newItem = `<li>${externalName}</li>`;
-    firstList.innerHTML += newItem;
-  });
-}
-
 function dataHandler(array) {
   console.table(array); // this is called "dot notation"
-  CreateListForHTMLForm(array);
+  const shuffled = array.sort(() => 0.5 - Math.random());
+  const selected = shuffled.slice(0, 15);
+  // console.log(document.querySelector('#resto-list'));
+  const firstList = document.querySelector('#resto-list');
+  firstList.innerHTML = '';
+  selected.forEach((item) => {
+    const {name} = item;
+    const externalName = name.toLowerCase();
+    firstList.innerHTML += (`<li>${externalName}</li>`);
+  });
 }
 
 async function mainEvent() { // the async keyword means we can make API requests
