@@ -80,7 +80,7 @@ async function mainEvent() { // the async keyword means we can make API requests
 
   const storedDataString = localStorage.getItem(retrievalVar);
   const storedDataArray = JSON.parse(storedDataString);
-  currentArray = storedDataArray.slice();
+  let currentArray = storedDataArray.slice();
   // console.log(storedDataArray);
   if (storedDataArray.length > 0) {
     restaurantName.addEventListener('input', async (event) => {
