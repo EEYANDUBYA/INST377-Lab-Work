@@ -33,7 +33,7 @@ async function mainEvent() { // the async keyword means we can make API requests
       if (arrayFromJson.length < 1) {
         return;
       }
-      const restaurantSelector = currentArray.filter((item) => {
+      const restaurantSelector = arrayFromJson.filter((item) => {
         const restaurantNameInput = item.name.toLowerCase();
         return restaurantNameInput.includes(event.target.value.toLowerCase());
       });
@@ -52,10 +52,10 @@ async function mainEvent() { // the async keyword means we can make API requests
         const categoryNameInput = item.category.toLowerCase();
         return categoryNameInput.includes(event.target.value.toLowerCase());
       });
-      currentArray = categorySelector;
+      // currentArray = categorySelector;
       console.log(categorySelector);
       if (submitPressedBool) {
-        randomizerFunction(currentArray);
+        randomizerFunction(categorySelector);
       }
     });
 
